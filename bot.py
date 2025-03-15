@@ -41,7 +41,7 @@ async def help_command(message: types.Message):
 async def menu(message: types.Message):
  keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 keyboard.add(KeyboardButton("Кто ты?"), KeyboardButton("Помощь"))
-await message.reply("Выбери действие:", reply_markup=keyboard)
+ await message.reply("Выбери действие:", reply_markup=keyboard)
 
 @dp.message_handler(lambda message: message.text == "Кто ты?")
 async def about_bot(message: types.Message):
