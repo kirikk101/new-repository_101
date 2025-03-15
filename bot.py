@@ -27,11 +27,11 @@ TOKEN = "8154752140:AAEAT4LkB_8Y3NCx9YLrVHOf60zwUTr9GdU"
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
 
-@dp.message_handler(commands=['start'])
+@dp.message_handler(commands=['/start'])
 async def start_command(message: types.Message):
  await message.reply("Привет! Я твой бот.")
 
-@dp.message_handler(commands=['help'])
+@dp.message_handler(commands=['/help'])
 async def help_command(message: types.Message):
  await message.reply("Я просто повторяю твои сообщения. Попробуй!")
 
@@ -42,8 +42,7 @@ async def echo(message: types.Message):
 if __name__ == "__main__":
  executor.start_polling(dp)
 
-
-@dp.message_handler(commands=['menu'])
+@dp.message_handler(commands=['/menu'])
 async def menu(message: types.Message):
  keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 keyboard.add(KeyboardButton("Кто ты?"), KeyboardButton("Помощь"))
