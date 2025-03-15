@@ -29,11 +29,11 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-"Привет! Я твой бот."
+ ("Привет! Я твой бот.")
 
 @dp.message_handler(commands=['help'])
 async def help_command(message: types.Message):
-"Я просто повторяю твои сообщения. Попробуй!"
+ ("Я просто повторяю твои сообщения. Попробуй!")
 
 @dp.message_handler()
 async def echo(message: types.Message):
