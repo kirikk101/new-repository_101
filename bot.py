@@ -29,15 +29,15 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
- ("Привет! Я твой бот.")
+ await message.reply("Привет! Я твой бот.")
 
 @dp.message_handler(commands=['help'])
 async def help_command(message: types.Message):
- ("Я просто повторяю твои сообщения. Попробуй!")
+ await message.reply("Я просто повторяю твои сообщения. Попробуй!")
 
 @dp.message_handler()
 async def echo(message: types.Message):
-await message.reply(message.text)
+ await message.reply(message.text)
 
 if __name__ == "__main__":
 executor.start_polling(dp)
@@ -47,12 +47,12 @@ executor.start_polling(dp)
 async def menu(message: types.Message):
 keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
 keyboard.add(KeyboardButton("Кто ты?"), KeyboardButton("Помощь"))
-await message.reply("Выбери действие:", reply_markup=keyboard)
+ await message.reply("Выбери действие:", reply_markup=keyboard)
 
 @dp.message_handler(lambda message: message.text == "Кто ты?")
 async def about_bot(message: types.Message):
-await message.reply("Я тестовый бот!")
+ await message.reply("Я тестовый бот!")
 
 @dp.message_handler(lambda message: message.text == "Помощь")
 async def help_message(message: types.Message):
-await message.reply("Напиши мне что-нибудь, и я повторю!")
+ await message.reply("Напиши мне что-нибудь, и я повторю!")
