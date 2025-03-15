@@ -29,7 +29,7 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-await message.reply("Привет! Я твой бот.")
+("Привет! Я твой бот.")
 
 @dp.message_handler(commands=['help'])
 async def help_command(message: types.Message):
