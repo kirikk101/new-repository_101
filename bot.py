@@ -39,9 +39,8 @@ async def help_command(message: types.Message):
 async def echo(message: types.Message):
  await message.reply(message.text)
 
-if 
- __name__ == "__main__":
-executor.start_polling(dp)
+if __name__ == "__main__":
+ executor.start_polling(dp)
 
 
 @dp.message_handler(commands=['menu'])
