@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+TOKEN = os.getenv('8154752140:AAEAT4LkB_8Y3NCx9YLrVHOf60zwUTr9GdU')
 PORT = int(os.getenv('PORT', 8443))
 
 def start(update: Update, context: CallbackContext) -> None:
