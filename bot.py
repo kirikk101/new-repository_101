@@ -20,7 +20,7 @@ async def main() -> None:
         listen="0.0.0.0",  
         port=PORT,         
         url_path=TOKEN,    
-        webhook_url=f"https://new-repository-101.onrender.com/{TOKEN}"  
+        webhook_url=f"https://new-repository-101.onrender.com/{8154752140:AAEAT4LkB_8Y3NCx9YLrVHOf60zwUTr9GdU}"  
     )
 
 if __name__ == '__main__':
