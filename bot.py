@@ -12,7 +12,7 @@ def start(update: Update, context: CallbackContext) -> None:
     update.message.reply_text('Привет! Я работаю на Render!')
 
 def main() -> None:
-    updater = Updater(TOKEN)
+    updater = Updater(TOKEN, use_context=True)
 
     dispatcher = updater.dispatcher
 
@@ -24,7 +24,7 @@ def main() -> None:
         url_path=TOKEN,    
     )
 
-    updater.bot.set_webhook(f"https://your-render-app.onrender.com/{TOKEN}")
+    updater.bot.set_webhook(f"https://dashboard.render.com/web/srv-cvarb32n91rc739a0ikg/deploys/dep-cvfdo5rqf0us73fpipng/{TOKEN}")
 
     updater.idle()
 
